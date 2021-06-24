@@ -33,6 +33,7 @@ return [
     'dev' => [
         // Prevent crawlers from indexing pages and following links
         'disallowRobots' => true,
+				'enableTemplateCaching' => false,
     ],
 
     // Staging environment settings

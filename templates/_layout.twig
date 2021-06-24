@@ -7,8 +7,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
-	<link rel="stylesheet" href="{{ bundle }}main.bundle.css">
-	<script src="{{ bundle }}main.bundle.js" defer></script>
+	<link rel="stylesheet" href="{{ bundle }}main.bundle.css?{{ devMode ? random(0, 100000) }}">
+	<script src="{{ bundle }}main.bundle.js?{{ devMode ? random(0, 100000) }}" defer></script>
 	{{ sprig.script }}
 	{% block head %}{% endblock %}
 </head>
