@@ -1,0 +1,22 @@
+{% set bundle = getenv('ASSET_BUNDLE_URL') %}
+{% set devMode = craft.app.getConfig.general.devMode %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }}</title>
+	<link rel="stylesheet" href="{{ bundle }}main.bundle.css">
+	<script src="{{ bundle }}main.bundle.js" defer></script>
+	{{ sprig.script }}
+	{% block head %}{% endblock %}
+</head>
+<body hx-boost="true" class="{{ devMode ? 'debug-screens' }} min-h-screen flex flex-col">
+	{% include '_partials/header' %}
+	<main class="flex-1">
+		{% block body %}{% endblock %}
+	</main>
+	{% include '_partials/footer' %}
+</body>
+</html>

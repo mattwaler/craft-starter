@@ -1,0 +1,22 @@
+dateModified: 1624038788
+email:
+  fromEmail: aaron.bushnell@gmail.com
+  fromName: 'Craft Starter'
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+system:
+  edition: solo
+  live: true
+  name: 'Craft Starter'
+  schemaVersion: 3.5.13
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

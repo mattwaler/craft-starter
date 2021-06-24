@@ -1,0 +1,30 @@
+{% set count = count ?? 0 %}
+
+
+<section class="container py-8">
+	<p class="font-bold text-3xl">Sprig Component!</p>
+	<p class="mt-4">
+		<strong>Note:</strong> This will only work on the first request when viewing this on the dev server proxy!
+	</p>
+	<p class="mt-4">
+		The current count is: <strong>{{ count }}</strong>
+	</p>
+	<div class="inline-flex gap-4">
+		<button
+			class="bg-indigo-700 text-white py-2 px-4 border flex-1 rounded-md"
+			sprig
+			s-val:count="{{ count + 1 }}"
+		>
+			Add
+		</button>
+
+		<button
+			class="bg-indigo-700 text-white py-2 px-4 border flex-1 rounded-md"
+			sprig
+			s-val:count="{{ count - 1 }}"
+		>
+			Subtract
+		</button>
+	</div>
+</section>
+

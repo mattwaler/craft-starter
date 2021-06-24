@@ -1,0 +1,9 @@
+{% extends '_layout' %}
+{% set title = 'Homepage' %}
+
+{% block body %}
+	<div class="container py-8">
+		<h1 class="text-3xl font-bold">Welcome to our Craft Starter.</h1>
+	</div>
+	{{ sprig('_sprig/counter.twig') }}
+{% endblock %}
